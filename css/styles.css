@@ -1968,6 +1968,7 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 3;
     display: block;
 }
+<<<<<<< HEAD
 
 /* Navbar Styling for Logged-in Users */
 .logged-in-navbar {
@@ -2096,3 +2097,5 @@ h1, h2, h3, h4, h5, h6 {
 .dropdown-menu a + a {
     border-top: 1px solid #eee; /* Adds separation between items */
 }
+=======
+>>>>>>> 1832c4c1147063821179a97e4b881acffd68e102
