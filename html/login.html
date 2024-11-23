@@ -12,9 +12,11 @@
     <!-- Centered Navbar -->
     <nav class="navar">
         <div class="navar-logo" >
-            <img src="../images/logo.png" alt="OnliFunds Logo" class="logo-img">
+			<a href="landing.html" style="text-decoration:none;">
+				<img src="../images/logo.png" alt="OnliFunds Logo" class="logo-img">
+			</a>
             <div class="logo-text">
-                <h1>OnliFunds</h1>
+                <h1><a href="landing.html" style="text-decoration:none; color:black;">OnliFunds</a></h1>
                 <p>Empower Your Ideas</p>
             </div>
         </div>
@@ -107,6 +109,23 @@ passwordField.addEventListener('input', function () {
 });
 
 
+</script>
+
+<script>
+document.querySelector('.login-form form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    const email = document.querySelector('#email').value.trim();
+    const password = document.querySelector('#password').value.trim();
+
+    // Check if both fields are filled
+    if (email && password) {
+        // Redirect to lanAfter.html
+        window.location.href = 'lanAfter.html';
+    } else {
+        alert('Please fill in both fields.');
+    }
+});
 </script>
 
 </html>

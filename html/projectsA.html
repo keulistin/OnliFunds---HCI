@@ -12,38 +12,39 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMtl/tE7HT72fSUkSuZXCe9jKg6abX5xnu2bDbD" crossorigin="anonymous">
 </head>
 <body>
-	<!-- Navbar for Logged-in Users -->
-	<nav class="logged-in-navbar">
-		<div class="logged-in-navbar-logo">
+		<!-- Navbar -->
+	<nav class="navbar-transparent">
+		<div class="navbar-logo">
 			<a href="lanAfter.html" style="text-decoration:none;">
-				<img src="../images/logo.png" alt="OnliFunds Logo" class="logged-in-logo-img">
+				<img src="../images/logo.png" alt="OnliFunds Logo" class="logo-img">
 			</a>
-			<div class="logged-in-logo-text">
-				<h1><a href="lanAfter.html" style="text-decoration:none; color:black;">OnliFunds</a></h1>
+			<div class="logo-text">
+				<h1><a href="lanAfter.html" style="text-decoration:none;">OnliFunds</a></h1>
 				<p>Empower Your Ideas</p>
 			</div>
 		</div>
-		<div class="logged-in-nav-links">
-			<a href="lanAfter.html" class="logged-in-nav-item">Home</a>
-			<a href="aboutA.html" class="logged-in-nav-item">About</a>
-			<a href="projectsA.html" class="logged-in-nav-item">Projects</a>
-			<a href="start.html" class="logged-in-nav-item logged-in-start-project-button">Start a Project</a>
-		<div class="logged-in-user-profile">
-			<span class="logged-in-user-name">Rosita Quarez</span>
-			<img src="../images/profile.png" alt="User Profile" class="logged-in-profile-img">
-			<div class="dropdown-menu">
-				<a href="my-projects.html">My Projects</a>
+		<div class="nav-links">
+			<a href="lanAfter.html" class="nav-item">Home</a>
+			<a href="aboutA.html" class="nav-item">About</a>
+			<a href="projectsA.html" class="nav-item">Projects</a>
+			<a href="start.html" class="nav-item start-project-button">Start a Project</a>
+		<div class="logged-in-user-profil">
+			<span class="logged-in-username">Rosita Quarez</span>
+			<img src="../images/profile.png" alt="User Profile" class="logged-in-profile-im">
+			<div class="dropdown-men">
+				<a href="my-projects.html" style="color:black;">My Projects</a>
 				<a href="backed-projects.html">Backed Projects</a>
 				<a href="profile-settings.html">Profile Settings</a>
 				<a href="login.html">Log Out</a>
 			</div>
 		</div>
 		</div>
+		</div>
 	</nav>
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
-			const userProfile = document.querySelector('.logged-in-user-profile');
-			const dropdownMenu = document.querySelector('.dropdown-menu');
+			const userProfile = document.querySelector('.logged-in-user-profil');
+			const dropdownMenu = document.querySelector('.dropdown-men');
 
 			userProfile.addEventListener('click', function() {
 				dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';

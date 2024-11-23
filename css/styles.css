@@ -1274,6 +1274,64 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #ff5252;
     color: white;
 }
+.logged-in-username{
+	color: white;
+	font-size: 16px;
+    font-weight: 500;
+}
+
+.logged-in-username:hover{
+    color: white;
+	font-weight: bold;
+}
+
+.logged-in-user-profil {    
+	position: relative;    
+	display: flex;    
+	align-items: center;    
+	margin-left: 25px;    
+	cursor: pointer;
+}
+
+.logged-in-user-profil img{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    margin-right: 10px;
+	margin-left: 10px;
+}
+
+.logged-in-user-profil .dropdown-men {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 200px;
+    z-index: 5;
+    padding: 10px 0;
+}
+
+.logged-in-user-profil .dropdown-men a {
+    margin: 0;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+	font-weight: bold;
+}
+
+.logged-in-user-profil .dropdown-men a:hover {
+    background-color: #f0f0f0;
+}
+
+.logged-in-user-profil .dropdown-men a + a {
+    border-top: 1px solid #eee; /* Adds separation between items */
+}
 
 /* Hero Section */
 /* Hero Section with Overlay */
