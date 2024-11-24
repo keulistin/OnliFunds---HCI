@@ -58,85 +58,134 @@
 
 
 
-<section class="main-proj-details">
-    <div class="main-proj-details-images">
-    </div>
-    <div class="main-proj-details-info">
-        <div class="m-p-d-info-part-1">  <!-- STARTER -->
-        <div class="starter-profile">
-            <div class="creator-pfp"> <img src="images/userprof.svg" alt=""></div>
-            <div class="starter-profile-info">
-                <h6 class="starter-name">Rosita Quarez</h6>
-                <div class="extra-info-starter">
-                    <p class="starter-total-campaign">5 Campaign </p>
-                    <p class="starter-location"><span id="starter-divider-loc">|</span> Cebu City</p>
+    <section class="main-proj-details">
+        <div class="main-proj-details-images">
+        </div>
+        <div class="main-proj-details-info">
+            <div class="m-p-d-info-part-1">  <!-- STARTER -->
+            <div class="starter-profile">
+                <div class="creator-pfp"> <img src="images/userprof.svg" alt=""></div>
+                <div class="starter-profile-info">
+                    <h6 class="starter-name">Rosita Quarez</h6>
+                    <div class="extra-info-starter">
+                        <p class="starter-total-campaign">5 Campaign </p>
+                        <p class="starter-location"><span id="starter-divider-loc">|</span> Cebu City</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="starter-icons">
-            <img src="images/Favorite.svg" alt="">
-            <img src="images/Flag_finish_fill.svg" alt="">
-        </div>
-        </div>
-        <div class="m-p-d-info-part-2">
-            <h1>ANIMALS</h1>
-            <h2>Paws of Hope: A Community Fundraiser for Strays in Need</h2>
-            <p>Paws of Hope is a community fundraiser dedicated to supporting stray animals. Through engaging events like charity walks and bake sales, we aim to raise funds for their care and HEALTH treatment while fostering awareness and compassion for strays in our community.</p>
-        </div>
-        <div class="custom-progress-container my-4">
-            <!-- Progress Bar -->
-            <div class="custom-progress w-100 position-relative" style="height: 10px; border-radius: 5px;">
-                <div class="custom-progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
-                    <!-- Percentage Label -->
-                    <span class="custom-progress-label">65%</span>
+            <div class="starter-icons">
+                <img src="images/Favorite.svg" alt="">
+                <img src="images/Flag_finish_fill.svg" alt="">
+            </div>
+            </div>
+            <div class="m-p-d-info-part-2">
+                <h1>ANIMALS</h1>
+                <h2>Paws of Hope: A Community Fundraiser for Strays in Need</h2>
+                <p>Paws of Hope is a community fundraiser dedicated to supporting stray animals. Through engaging events like charity walks and bake sales, we aim to raise funds for their care and HEALTH treatment while fostering awareness and compassion for strays in our community.</p>
+            </div>
+            <div class="custom-progress-container my-4">
+                <!-- Progress Bar -->
+                <div class="custom-progress w-100 position-relative" style="height: 10px; border-radius: 5px;">
+                    <div class="custom-progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                        <!-- Percentage Label -->
+                        <span class="custom-progress-label">65%</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="m-p-d-info-part-3">
-            <div class="dets-cont">
-                <img src="images/fundgoal.svg" alt="">
-                <div class="dets-conts-2">
-                    <h1>Php 10, 000</h1>
-                    <p>Fund Goal</p>
+            <div class="m-p-d-info-part-3">
+                <div class="dets-cont">
+                    <img src="images/fundgoal.svg" alt="">
+                    <div class="dets-conts-2">
+                        <h1>Php 10, 000</h1>
+                        <p>Fund Goal</p>
+                    </div>
                 </div>
-            </div>
-            <div class="dets-cont">
-                <img src="images/moneylogo.svg" alt="">
-                <div class="dets-conts-2">
-                    <h1>Php 6, 500</h1>
-                    <p>Total Raised</p>
+                <div class="dets-cont">
+                    <img src="images/moneylogo.svg" alt="">
+                    <div class="dets-conts-2">
+                        <h1>Php 6, 500</h1>
+                        <p>Total Raised</p>
+                    </div>
                 </div>
-            </div>
-            <div class="dets-cont">
-                <img src="images/Calendar_duotone_line.svg" alt="">
-                <div class="dets-conts-2">
-                    <h1>100</h1>
-                    <p>Days to go</p>
+                <div class="dets-cont">
+                    <img src="images/Calendar_duotone_line.svg" alt="">
+                    <div class="dets-conts-2">
+                        <h1>100</h1>
+                        <p>Days to go</p>
+                    </div>
                 </div>
-            </div>
 
-        </div>
-        <div class="m-p-d-info-part-4">
-            <h1 href="#" class="fund-this-proj-button"> Fund This Project</h1>
-        </div>        
-</section>
+            </div>
+            <div class="m-p-d-info-part-4">
+                <h1 href="#" class="fund-this-proj-button"> Fund This Project</h1>
+            </div>        
+    </section>
 
 
 <!-- ABOUT PROJECT -->
  <section class="about-project">
     <div class="about-proj-cont">
-        <div class="about-proj-list">
-            <h1>About Project</h1>
-            <h2>Updates</h2>
-            <h2>Supporter List</h2>
-            <h2>Comments</h2>
+        <div class="about-proj-list" id="menu">
+            <button id="menu-about" onclick="showSection('about', this)">About Project</button>
+            <button onclick="showSection('updates', this)">Updates</button>
+            <button onclick="showSection('support', this)">Supporter List</button>
+            <button onclick="showSection('comments', this)">Comments</button>
         </div>
-        <img src="images/proj-det-pic.svg" alt="">
-        <p>Paws of Hope is a community-focused initiative aimed at raising awareness and funds for stray animals in urgent need of care. Stray animals often face severe challenges, including hunger, lack of shelter, and inadequate HEALTH attention. Through a series of engaging fundraising events such as charity walks, bake sales, and pet adoption fairs, we will unite animal lovers, families, and local businesses to generate much-needed resources for these vulnerable animals. Each event will not only raise funds but also foster a spirit of compassion and community, encouraging participants to become advocates for responsible pet ownership and animal welfare.
-         <br>
-         <br>
-         In addition to fundraising, Paws of Hope will establish partnerships with local veterinarians, animal shelters, and businesses to create a robust support network for strays. Our awareness campaign will utilize social media and community outreach to educate the public about the plight of stray animals and the importance of our mission. By actively engaging volunteers from the community, we will cultivate a sense of ownership and commitment to this cause. </p>
+
+        <!-- ABOUT DIV -->
+        <div id="about" class="content-section active">
+            <img src="images/proj-det-pic.svg" alt="">
+            <p>Paws of Hope is a community-focused initiative aimed at raising awareness and funds for stray animals in urgent need of care. Stray animals often face severe challenges, including hunger, lack of shelter, and inadequate HEALTH attention. Through a series of engaging fundraising events such as charity walks, bake sales, and pet adoption fairs, we will unite animal lovers, families, and local businesses to generate much-needed resources for these vulnerable animals. Each event will not only raise funds but also foster a spirit of compassion and community, encouraging participants to become advocates for responsible pet ownership and animal welfare.
+             <br>
+             <br>
+             In addition to fundraising, Paws of Hope will establish partnerships with local veterinarians, animal shelters, and businesses to create a robust support network for strays. Our awareness campaign will utilize social media and community outreach to educate the public about the plight of stray animals and the importance of our mission. By actively engaging volunteers from the community, we will cultivate a sense of ownership and commitment to this cause. </p>
+        </div>
+
+        <!-- UPDATES DIV -->
+        <div id="updates" class="content-section">
+            <div class="update-cont">
+                <div class="calendar">
+                    <div class="calendar-cont">
+                        <h1>Oct</h1>
+                        <h2>27</h2>
+                    </div>
+    
+                </div>
+                <div class="add-updates">
+                    <img src="images/add_circle.svg" alt="">
+                    <h1>Add new update </h1>
+                </div>
+            </div>
+            <div class="line"></div>
+
+        </div>
+        
+    <!-- SUPPORTER LIST -->
+        <div id="support" class="content-section">
+            <div class="support-cont">
+                <div class="support-info">
+                    <div class="supporter-img">
+                        <img src="images/supporter-pfp.svg" alt="">
+                    </div>
+                    <div class="supporter-name">
+                        <h1>Adelina Dela Crus</h1>
+                        <h2>Donated on November 10, 2024</h2>
+                    </div>
+                    <div class="supporter-amount">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+          <div id="comments" class="content-section">
+            <h2>Comments</h2>
+            <p>We value your feedback! Share your thoughts, suggestions, and experiences with us...</p>
+          </div>
+
     </div>
+
+
     <div class="support-other-proj"> 
         <h1>Support other projects</h1>
         <img src="images/image 74.svg" alt="">
@@ -302,7 +351,7 @@
 
 </section>
     </div>
- </section>
+ </section>    <!-- class proj-details-content -->
 
 
  
@@ -353,5 +402,32 @@
 
     <!-- BOOTSTRAP SCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function showSection(sectionId, button) {
+          // Hide all sections
+          const sections = document.querySelectorAll('.content-section');
+          sections.forEach(section => {
+            section.classList.remove('active');
+          });
+    
+          // Show the selected section
+          const activeSection = document.getElementById(sectionId);
+          if (activeSection) {
+            activeSection.classList.add('active');
+          }
+    
+          // Remove active state from all buttons
+          const buttons = document.querySelectorAll('#menu button');
+          buttons.forEach(btn => {
+            btn.classList.remove('active-btn');
+          });
+    
+          // Add active state to the clicked button
+          button.classList.add('active-btn');
+        }
+      </script>
 </body>
 </html>

@@ -304,6 +304,25 @@ padding: 5% 10%;
     margin: 6% 0% 3% 1%;
 }
 
+/* MENU DIVS */
+#menu button.active-btn {
+    text-decoration: underline;
+  }
+
+
+
+.content-section {
+    display: none; /* Hide all sections by default */
+    padding: 30px 0px;
+
+  }
+  .content-section.active {
+    display: block; /* Only the active section will be displayed */
+  }
+
+
+
+
 
 /* ABOUT PROJECT------------------------------- */
 .about-project {
@@ -326,21 +345,25 @@ padding: 5% 10%;
     display: flex;
 }
 
-.about-proj-list h1 {
-    font-size: 26px;
+#menu-about{
+    color: black !important;
+    font-size: 30px;
     font-weight: 700;
-    padding: 4px 50px 0px 0px;
+    padding: 4px 50px 0px 20px ;
+    border: none;
+    background-color: white;
 }
 
-.about-proj-list h2 {
-    font-size: 16px;
+.about-proj-list button {
+    font-size: 20px;
     font-weight: 600;
     color: #1B8271;
     padding: 10px 27px;
+    border: none;
+    background-color: white;
 }
 
 .about-proj-cont img {
-    margin: 30px 0px;
     width: 100%;
 }
 
@@ -348,6 +371,74 @@ padding: 5% 10%;
     margin: 20px 0px;
 }
 
+
+/* UPDATES DIV */
+
+.update-cont {
+    display: flex;
+}
+.calendar-cont {
+    width: 100px;
+    height: 100px;
+    background-color:#1B8271; 
+    color: white;
+    border-radius: 50%; /* Makes the div a circle */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 60px;
+}
+
+.calendar-cont h1 {
+    margin: 7px;
+    font-size: 20px;
+}
+
+.calendar-cont h2 {
+    font-size: 30px;
+    margin-top: -4px;
+}
+
+.add-updates {
+    width: 730px;
+    height: 70px;
+    margin-left: 50px;
+    margin-top: 15px;
+    justify-content: center;
+    border: #000000 1px solid;
+    border-radius: 8px;
+    padding: 15px 60px;
+    display: flex;
+}
+.add-updates img {
+    width: 30px;
+    height: 30px;
+    margin: 0px 20px;
+}
+
+.add-updates h1 {
+    font-size: 22px;
+    color: #1B8271;
+    font-weight: 600;
+}
+
+.line {
+    margin-left: 110px;
+    margin-top: -10px;
+    width: 2px;
+    height: 50px;
+    background-color: black;
+  }
+
+
+
+/* SUPPORT OTHER PROJ-------------------- */
 .support-other-proj {
     width: 30%;
     padding: 35px 30px;
