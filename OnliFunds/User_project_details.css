@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
 
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #FBFBFB;
@@ -413,7 +414,7 @@ padding: 5% 10%;
     justify-content: center;
     border: #000000 1px solid;
     border-radius: 8px;
-    padding: 15px 60px;
+    padding: 20px 60px;
     display: flex;
 }
 .add-updates img {
@@ -437,7 +438,154 @@ padding: 5% 10%;
   }
 
 
+  /* SUPPORTER LIST */
 
+
+  .supporter-img img {
+    margin-right: 20px;
+    width: 77px;
+    height: 77px;
+  }
+
+  .support-info {
+    display: flex;
+    border: #000000 1px solid;
+    padding: 15px;
+    width: 98%;
+    border-radius: 8px;
+    justify-content: center;
+    margin: 25px 0px;
+  }
+
+  .supporter-name {
+    margin: 10px 290px 0px 5px;
+  }
+
+  .supporter-name h1 {
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .supporter-name h2 {
+    font-size: 22px;
+  }
+
+  .supporter-amount h1 {
+    font-size: 33px;
+    font-weight: 600;
+    margin-top: 15px;
+  }
+
+
+/* COMMENTS---------------------------------------- */
+.com-header {
+    margin: auto;
+    width: 400px;
+}
+
+.com-header h1{
+    border: #000000 1px solid;
+    font-size: 15px;
+    text-align: center;
+    padding: 5px 30px;
+    border-radius: 8px;
+    margin: 20px 0px;
+}
+
+.com-text-box {
+    border: #000000 1.9px solid;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px 20px 5px 20px;
+    margin-top: 50px;
+}
+
+.text-box input {
+    height: 100px;
+}
+
+.text-box input:focus {
+    border: none;
+    outline: none;
+}
+
+.com-pfp {
+    display: flex;
+}
+
+.com-pfp h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 15px;
+}
+
+
+.com-pfp img {
+    width: 60px;
+    height: 60px;
+}
+
+.com-but-list {
+    display: flex;
+    justify-content: space-between;
+    border-top: #00000065 1px solid;
+    padding: 20px 10px 0px 10px;
+}
+
+.text-box input {
+    border: none;
+    margin: 10px 0px;
+
+}
+
+
+.com-edit {
+    display: flex;
+}
+
+.com-edit img {
+    width: 25px;
+    height: 25px;
+    margin: 11px 10px 0px 0px;
+}
+
+.comment-button h1 {
+    background-color: #1B8271;
+    color: white;
+    font-size: 16px;
+    padding: 12px 25px;
+    border-radius: 8px;
+}
+
+.comment-hist {
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.comment-hist-cont {
+    display: flex;
+    margin: 40px 0px;
+}
+
+.comment-hist-info {
+    margin-left: 20px;
+}
+
+.comment-hist-cont h1 {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.comment-hist-cont h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+.comment-hist-cont img {
+    width: 62px;
+    height: 62px;
+}
 /* SUPPORT OTHER PROJ-------------------- */
 .support-other-proj {
     width: 30%;
