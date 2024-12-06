@@ -222,9 +222,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="starter-icons">
-                    <img src="../OnliFunds/images/Favorite.svg" alt="">
-                    <img src="../OnliFunds/images/Flag_finish_fill.svg" alt="">
+                <div class="heartflag">
+                    <button><i class="far fa-heart"></i></button>	
+                    <button><a href="" class="showOver"><i class="fas fa-flag"></i></a></button>
                 </div>
                 </div>
                 <div class="m-p-d-info-part-2">
@@ -312,7 +312,7 @@
             <div id="support-upd" class="content-section-upd">
                 <div class="support-cont-upd">
                     <div class="support-info-upd">
-                        <div class="supporter-img">
+                        <div class="supporter-img-upd">
                             <img src="../OnliFunds/images/supporter-pfp.svg" alt="">
                         </div>
                         <div class="supporter-name-upd">
@@ -351,13 +351,16 @@
                             <h1>John Doe</h1>
                         </div>
                         <div class="text-box-upd">
-                            <input type="text">
+                            <!-- The editable area -->
+                            <div id="editor" contenteditable="true" style="padding: 10px; min-height: 120px;">
+                                <!-- Content goes here -->
+                            </div>
                         </div>
                         <div class="com-but-list-upd">
                             <div class="com-edit-upd">
-                                <img src="../OnliFunds/images/bold.svg" alt="">
-                                <img src="../OnliFunds/images/italic.svg" alt="">
-                                <img src="../OnliFunds/images/link.svg" alt="">
+                                <button onclick="toggleBold()"><i class="fas fa-bold"></i></button>
+                                <button onclick="toggleItalic()"><i class="fas fa-italic"></i></button>
+                                <button onclick="insertImage()"><i class="fas fa-image"></i></button>
                             </div>
                             <div class="comment-button-upd">
                                 <h1>Comment</h1>
@@ -412,8 +415,8 @@
             <div class="similar-text">
                 <h1>Similar Projects </h1>
                 <div class="viewmore">
-                    <h2>View More</h2>
-                    <img src="../OnliFunds/images/arrow_forward.svg" alt="">
+                    <a href="projectsA.html">View More</a>
+                    <a href="projectsA.html"><img src="../OnliFunds/images/arrow_forward.svg" alt=""></a>
                 </div>
                 
             </div>
@@ -693,6 +696,7 @@ function showOver(event) {
         }
     });
 }
+
 // Function to toggle the heart icon
 function toggleHeart(event) {
     const heartIcon = event.target;
@@ -774,6 +778,57 @@ function showOverlay(event) {
 document.querySelectorAll('.showOverlayLink').forEach(link => {
     link.addEventListener('click', showOverlay);
 });
+
+
+// TOOLS
+    // Function to handle bold text
+    function toggleBold() {
+        document.execCommand('bold', false, null);
+    }
+
+    // Function to handle italic text
+    function toggleItalic() {
+        document.execCommand('italic', false, null);
+    }
+
+    
+    // Function to insert an image from local storage (Base64)
+    function insertImage() {
+        document.getElementById("imageUpload").click();
+    }
+
+    // Function to handle image upload and convert it to Base64
+    function handleImageUpload(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onloadend = function() {
+            const base64Image = reader.result;
+            const editor = document.getElementById("editor");
+            const imgTag = `<img src="${base64Image}" alt="Image" style="max-width:100%; height:auto;">`;
+            document.execCommand('insertHTML', false, imgTag);
+        };
+
+        reader.readAsDataURL(file);
+    }
+
+  
+
+// Function to toggle the heart icon
+function toggleHeart(event) {
+    const heartIcon = event.target;
+    
+    // Toggle the heart icon class
+    if (heartIcon.classList.contains('far')) {
+        heartIcon.classList.remove('far');
+        heartIcon.classList.add('fas');
+    } else {
+        heartIcon.classList.remove('fas');
+        heartIcon.classList.add('far');
+    }
+}
+
 </script>
 
 </body>
