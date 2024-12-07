@@ -6,8 +6,52 @@ padding: 5% 10%;
 }
 
 
+
+/* IMAGE MOVING TRIAL */
+
+.thumbnail img {
+    width: 130px;
+    height: 130px;
+    cursor: pointer;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+  
+  .thumbnail img.active {
+    transform: scale(1.1); /* Slightly enlarge active thumbnail */
+    
+  }
+  
+  .mp-main-image img {
+    width: 750px;
+    height: 520px;
+    border-radius: 8px;
+    margin: 50px 0px 30px 30px;
+    object-fit: cover;
+  }
+  
+  .thumbnail-container {
+    display: flex;
+    gap: 10px; 
+    margin: 10px 20px 0px 30px;
+  }
+
+#modalImage {
+    width: 750px;
+    height: 520px;
+    border-radius: 8px;
+    object-fit: cover;
+
+}
+
+
+
+
+
+
 /* MAIN PRPOJ DETAILS  */
-.main-proj-details {
+.main-proj-details-upd {
     background-color: white;
     margin: 2% 0%;
     height: 870px;
@@ -17,14 +61,13 @@ padding: 5% 10%;
                 0 3px 4px rgba(0, 0, 0, 0.06); /* Subtle multi-layer shadow */
 }
 
-.main-proj-details-images {
+.main-proj-details-upd-images {
     width: 80%;
 }
 
-.main-proj-details-info {
+.main-proj-details-upd-info {
     width: 100%;
-    padding: 20px 35px;
-
+    padding: 20px 35px 20px 60px;
 }
 
 

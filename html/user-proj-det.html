@@ -207,10 +207,35 @@
     
     
     
-        <section class="main-proj-details">
-            <div class="main-proj-details-images">
+        <section class="main-proj-details-upd">
+            <div class="main-proj-details-upd-images">
+                                <!-- Main Image -->
+                <div class="mp-main-image">
+                    <img id="selectedImage" src="../OnliFunds/images/catdog.svg" alt="Main Image" class="img-fluid rounded shadow">
+                </div>
+                
+                <!-- Thumbnail Images -->
+                <div class="thumbnail-container">
+                    <div class="thumbnail" onclick="changeImage('../OnliFunds/images/catdog.svg', this)">
+                        <img src="../OnliFunds/images/catdog.svg" alt="Thumbnail 1">
+                    </div>
+                    <div class="thumbnail" onclick="changeImage('../OnliFunds/images/cat.svg', this)">
+                        <img src="../OnliFunds/images/cat.svg" alt="Thumbnail 2">
+                    </div>
+                    <div class="thumbnail" onclick="changeImage('../OnliFunds/images/dog.svg', this)">
+                        <img src="../OnliFunds/images/dog.svg" alt="Thumbnail 3">
+                    </div>
+                </div>    
+
+                <!-- Enlarge Image Modal -->
+                <div class="modal fade" id="enlargeImageModal" tabindex="-1"  >
+                    <div class="modal-dialog modal-dialog-centered">
+                            <img id="modalImage" src="" alt="Enlarged Image">
+                    </div>
+                </div>
             </div>
-            <div class="main-proj-details-info">
+            
+            <div class="main-proj-details-upd-info">
                 <div class="m-p-d-info-part-1">  <!-- STARTER -->
                 <div class="starter-profile">
                     <div class="creator-pfp"> <img src="../OnliFunds/images/userprof.svg" alt=""></div>
@@ -828,6 +853,29 @@ function toggleHeart(event) {
         heartIcon.classList.add('far');
     }
 }
+
+
+// Change main image and highlight the clicked thumbnail
+function changeImage(imageSrc, thumbnail) {
+  // Update the main image
+  const mainImage = document.getElementById('selectedImage');
+  mainImage.src = imageSrc;
+
+  // Remove the "active" class from all thumbnails
+  const thumbnails = document.querySelectorAll('.thumbnail img');
+  thumbnails.forEach((img) => img.classList.remove('active'));
+
+  // Add the "active" class to the clicked thumbnail
+  thumbnail.querySelector('img').classList.add('active');
+}
+
+// Open modal with enlarged image when the main image is clicked
+document.getElementById('selectedImage').addEventListener('click', function () {
+  const modalImage = document.getElementById('modalImage'); // Modal image element
+  modalImage.src = this.src; // Set the modal image source to the main image's source
+  const modal = new bootstrap.Modal(document.getElementById('enlargeImageModal')); // Bootstrap modal initialization
+  modal.show(); // Show the modal
+});
 
 </script>
 
