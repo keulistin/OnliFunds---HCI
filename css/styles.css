@@ -377,7 +377,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Progress Bar */
 .progress-bar {
-	background: #f1f1f1;
+	background: #f1f1f1; 
 	border-radius: 8px;
 	overflow: hidden;
 	margin-bottom: 20px;
@@ -389,7 +389,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .progress {
 	height: 50px;
-	background-color: #D55E5E;
+	background-color: #ff6f61;
 	text-align: center;
 	color: #fff;
 	font-size: 20px;

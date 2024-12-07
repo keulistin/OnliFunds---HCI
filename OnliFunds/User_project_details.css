@@ -299,7 +299,7 @@ padding: 5% 10%;
 /* ABOUT PROJECT------------------------------- */
 .about-project-upd {
  display: flex;
- margin: 3% 0% 11% 0%;
+ margin: 4% 0% 9% 0%;
 }
 
 .about-proj-cont-upd {
@@ -686,7 +686,7 @@ padding: 5% 10%;
 .similar-text {
     display: flex;
     justify-content: space-between;
-    margin: 0px 2%;
+    margin: 30px 2%;
 }
 
 
@@ -778,7 +778,7 @@ padding: 5% 10%;
 
 /* Progress Bar */
 .progress-upd {
-    background-color: #f0f0f0;
+    background-color: #ff6f61;
     border-radius: 5px;
     height: 8px;
     margin: 12px 0;
@@ -787,8 +787,8 @@ padding: 5% 10%;
 
 
 .progress-bar-upd {
-    background-color: #ff4d4d;
-    width: 50%; /* Example progress width */
+    background-color: #e9ecef;
+    width: 100%; /* Example progress width */
     height: 100%;
 }
 
