@@ -502,9 +502,22 @@ li {
 }
 
 .choose-donation-amount img {
+    width: 400px;
+    height: 180px;
+    margin: 27px 0px 0px 5px;
+    object-fit: cover;
+}
+
+.choose-withdraw-amount {
+    display: flex;
+}
+
+.choose-withdraw-amount img {
     width: 350px;
     height: 250px;
+
 }
+
 
 .choose-d-a-info {
     padding: 30px 30px;
@@ -706,3 +719,10 @@ li {
     gap: 85px;
 	padding: 80px 0 150px 0px;
   }
+
+
+#city-code::-webkit-outer-spin-button,
+#city-code::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

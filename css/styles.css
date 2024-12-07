@@ -3211,9 +3211,18 @@ height: 90%;	/* Adjust width as needed */
     margin: 0px 20px;
 }
 
+.cont-right-info a {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0px 20px;
+    text-decoration: none;
+    color: black;
+}
+
+
 .cont-right-info img {
     width: 23px;
     height: 23px;
-    margin: 2px 0px;
+    margin: 5px 0px;
 }
 
