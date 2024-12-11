@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnliFunds</title>
+    <link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/your_campaings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMtl/tE7HT72fSUkSuZXCe9jKg6abX5xnu2bDbD" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <style>
+        body, html {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fbfbfb;
+        }
+
+
+
+
+
+
+        .modal-overlay {
+            display: none; /* Initially hidden */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(65, 149, 134, 0.8); /* Semi-transparent background */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-overlays {
+            display: none; /* Initially hidden */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 80%;
+            max-width: 500px;
+        }
+
+            .modal .card .edito {
+                border: 1px solid #EAEBEE;
+                box-sizing: border-box;
+                border-radius: 8px;
+                overflow: hidden !important;
+                margin-bottom: 0px !important;
+            }
+
+                .modal .card .edito .toolbar {
+                    background: #F5F6F7;
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+                    border-radius: 8px;
+                }
+
+                    .modal .card .edito .toolbar button {
+                        background-color: transparent;
+                        color: black;
+                        border: none;
+                        padding: 10px;
+                        border-radius: 0;
+                    }
+
+            .modal input {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .modal button {
+                background-color: #ff6b6b;
+                color: #fff;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .modal .card {
+                border-radius: 5px;
+                margin: 20px 0;
+                text-align: left;
+            }
+
+                .modal .card input[type="file"] {
+                    width: 100%;
+                }
+
+            .modal .actions {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 30px;
+            }
+
+                .modal .actions button {
+                    width: 45%;
+                }
+
+                    .modal .actions button.cancel {
+                    }
+        .modal-overlay {
+            display: none; /* Initially hidden */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(65, 149, 134, 0.8); /* Semi-transparent background */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-overlays {
+            display: none; /* Initially hidden */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 80%;
+            max-width: 500px;
+        }
+
+            .modal .card .edito {
+                border: 1px solid #EAEBEE;
+                box-sizing: border-box;
+                border-radius: 8px;
+                overflow: hidden !important;
+                margin-bottom: 0px !important;
+            }
+
+                .modal .card .edito .toolbar {
+                    background: #F5F6F7;
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+                    border-radius: 8px;
+                }
+
+                    .modal .card .edito .toolbar button {
+                        background-color: transparent;
+                        color: black;
+                        border: none;
+                        padding: 10px;
+                        border-radius: 0;
+                    }
+
+            .modal input {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .modal button {
+                background-color: #ff6b6b;
+                color: #fff;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .modal .card {
+                border-radius: 5px;
+                margin: 20px 0;
+                text-align: left;
+            }
+
+                .modal .card input[type="file"] {
+                    width: 100%;
+                }
+
+            .modal .actions {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 30px;
+            }
+
+                .modal .actions button {
+                    width: 45%;
+                }
+
+                    .modal .actions button.cancel {
+                    }
+
+        .container {
+            max-width: 1200px;
+            margin: 70px auto;
+            padding: 0 20px;
+        }
+
+        .stats .stats1 {
+            display: flex;
+            font-size: 15px;
+        }
+
+            .stats .stats1 h1 {
+                font-size: 15px;
+                font-weight: bold;
+                margin-top: -1px;
+            }
+
+        .campaign {
+            display: flex;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #000;
+        }
+
+            .campaign img {
+                width: 100%;
+                height: auto;
+            }
+
+        .campaign-details {
+            padding: 30px;
+            flex: 2;
+        }
+
+            .campaign-details h2 {
+                margin: 10px 0;
+                font-size: 1.5em;
+            }
+
+            .campaign-details .progress-bar {
+                background-color: #f0f0f0;
+                border-radius: 5px;
+                overflow: hidden;
+                margin: 10px 0;
+                margin-bottom: 40px;
+            }
+
+                .campaign-details .progress-bar div {
+                    height: 10px;
+                    width: 65%;
+                    background-color: #ff6b6b;
+                }
+
+            .campaign-details .stats {
+                display: flex;
+                justify-content: space-between;
+                margin: 10px 0;
+            }
+
+                .campaign-details .stats div {
+                }
+
+                    .campaign-details .stats div p {
+                        margin: 5px 0;
+                    }
+
+            .campaign-details .dates {
+                margin: 10px 0;
+                font-size: 15px;
+                font-weight: bold;
+                margin-bottom: 30px;
+            }
+
+                .campaign-details .dates p {
+                    margin: 5px 0;
+                }
+
+            .campaign-details .actions {
+                display: flex;
+                justify-content: flex-end;
+            }
+
+                .campaign-details .actions button {
+                    background-color: #ff6b6b;
+                    color: #fff;
+                    border: none;
+                    padding: 15px 20px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    width: 40%;
+                }
+
+        .campaign-actions {
+            flex: 1;
+            border-left: 1px solid;
+            padding: 20px;
+        }
+
+            .campaign-actions ul {
+                list-style: none;
+                padding: 0;
+            }
+
+                .campaign-actions ul li {
+                    margin: 10px 0;
+                    display: flex;
+                    align-items: center;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+                    .campaign-actions ul li i {
+                        margin-right: 10px;
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+
+                    .campaign-actions ul li a {
+                        text-decoration: none;
+                        color: black;
+                    }
+
+        @media (max-width: 768px) {
+
+            .campaign {
+                flex-direction: column;
+            }
+
+            .campaign-actions {
+                border-left: none;
+                border-top: 1px solid #e0e0e0;
+                margin-top: 20px;
+            }
+        }
+
+        .upper {
+            display: flex;
+            gap: 65%;
+            padding-top: 10px;
+        }
+
+            .upper .right {
+                text-align: right;
+            }
+
+        .overlays {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(65, 149, 134, 0.7); /* Semi-transparent background */
+            z-index: 9999;
+            display: none; /* Initially hidden */
+            /* Banner Section Styling */
+
+
+         .banner1{
+            position: relative;
+            width: 100%;
+            height: 165px;
+            background-image: url("../images/banner2.png"); /* Ensure this path is correct */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #419586;
+            opacity: 0.6; /* 60% overlay */
+            z-index: 1;
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+        }
+
+            .banner-content h1 {
+                font-size: 36px;
+                font-weight: bold;
+                margin: 0 0 20px 0;
+            }
+
+        .cont {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+            margin: 0 100px;
+            margin-bottom: 120px;
+            min-height: 100vh;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Navbar for Logged-in Users -->
+    <nav class="logged-in-navbar">
+        <div class="logged-in-navbar-logo">
+            <a href="lanAfter.html" style="text-decoration:none;">
+                <img src="../images/logo.png" alt="OnliFunds Logo" class="logged-in-logo-img">
+            </a>
+            <div class="logged-in-logo-text">
+                <h1><a href="lanAfter.html" style="text-decoration:none; color:black;">OnliFunds</a></h1>
+                <p>Empower Your Ideas</p>
+            </div>
+        </div>
+        <div class="logged-in-nav-links">
+            <a href="lanAfter.html" class="logged-in-nav-item">Home</a>
+            <a href="aboutA.html" class="logged-in-nav-item">About</a>
+            <a href="projectsA.html" class="logged-in-nav-item">Projects</a>
+            <a href="create1.html" class="logged-in-nav-item logged-in-start-project-button">Start a Project</a>
+            <div class="logged-in-user-profile">
+                <span class="logged-in-user-name">Rosita Quarez</span>
+                <img src="../images/profile.png" alt="User Profile" class="logged-in-profile-img">
+                <div class="dropdown-menu">
+                    <a href="my-projects.html">My Projects</a>
+                    <a href="backed-projects.html">Backed Projects</a>
+                    <a href="profile-settings.html">Profile Settings</a>
+                    <a href="login.html">Log Out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>document.addEventListener("DOMContentLoaded", function () {
+            const userProfile = document.querySelector('.logged-in-user-profile');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+
+            userProfile.addEventListener('click', function () {
+                dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+            });
+
+            // Close the dropdown if clicked outside
+            document.addEventListener('click', function (e) {
+                if (!userProfile.contains(e.target)) {
+                    dropdownMenu.style.display = 'none';
+                }
+            });
+        });</script>
+    <!-- About Banner Section -->
+    <section class="banner1">
+        <div class="overlay"></div>
+        <div class="banner-content">
+            <h1>Your Campaigns</h1>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- CONTENT -->
+    <div class="container">
+        <div class="campaign" id="campaign">
+            <div class="campaign-details">
+                <img alt="A dog and a cat together" height="300" src="../images/pet1.png" width="600" />
+                <div class="upper">
+                    <p style="color: #1B8271; font-weight: bold;">
+                        ANIMALS
+                    </p>
+                    <p class=" right" style="color: black;">
+                        Started on Oct 27, 2024
+                    </p>
+                </div>
+
+                <h2 style="padding-bottom: 25px; font-size: 30px; font-weight:bold;">
+                    Paws of Hope: A community Fundraiser for Strays in Need
+                </h2>
+                <div class="progress-bar">
+                    <div>
+                    </div>
+                </div>
+                <div class="stats">
+                    <div class="stats1">
+                        <img src="../images/fundgoal.svg" alt="" style="width: 37px; height:30px;">
+                        <div class="statscont">
+                            <h1>Php 10, 000</h1>
+                            <p>Fund Goal</p>
+                        </div>
+                    </div>
+                    <div class="stats1">
+                        <img src="../images/moneylogo.svg" alt="" style="width: 25px; height:23px;">
+                        <div class="statscont">
+                            <h1>Php 6, 500</h1>
+                            <p>Total Raised</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dates">
+                    <p>
+                        Donors: 1
+                    </p>
+                    <p>
+                        Comments: 2
+                    </p>
+                    <p>
+                        Start Date: Oct 27, 2024
+                    </p>
+                    <p>
+                        End Date: Nov 26, 2024
+                    </p>
+                </div>
+                <div class="actions">
+                    <button>
+                        View campaign
+                    </button>
+                </div>
+            </div>
+            <div class="campaign-actions">
+                <ul>
+                    <li onclick="showModal()">
+                        <i class="fas fa-share">
+                        </i>
+                        Share with friends
+                    </li>
+                    <li onclick="showUpdateModal()">
+                        <i class="fas fa-plus">
+                        </i>
+                        Add a campaign update
+                    </li>
+                    <li>
+                        <i class="fas fa-edit">
+                        </i>
+                        <a href="../html/edit1.html">Edit campaign</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-money-bill-wave">
+                        </i>
+                        <a href="../html/withdraw.html">Withdraw</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-history">
+                        </i>
+                        <a href="../html/withdrawalHist.html">Withdrawal History</a>
+                    </li>
+                    <li onclick="showDeleteModal()">
+                        <i class="fas fa-trash">
+                        </i>
+                        Delete campaign
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <h2>
+                Share this campaign
+            </h2>
+            <input id="campaign-link" readonly type="text" value="https://onlifunds.com/campaign/paws-of-hope" />
+            <button onclick="copyLink()">
+                Copy
+            </button>
+        </div>
+    </div>
+    <div class="modal-overlay" id="update-modal-overlay">
+        <div class="modal">
+            <h2>
+                Add Campaign Update
+            </h2>
+            <div class="card">
+                <h3>
+                    Update’s Title
+                </h3>
+                <input placeholder="Enter update's title" type="text" />
+            </div>
+            <div class="card">
+                <h3>
+                    Upload Cover Photo
+                </h3>
+                <input type="file" />
+            </div>
+            <div class="card">
+                <h3>
+                    Update Details
+                </h3>
+                <div class="edito">
+                    <div class="toolbar">
+                        <button onclick="toggleBold()"><i class="fas fa-bold"></i></button>
+                        <button onclick="toggleItalic()"><i class="fas fa-italic"></i></button>
+                        <button onclick="toggleUnderline()"><i class="fas fa-underline"></i></button>
+                        <button onclick="alignLeft()"><i class="fas fa-align-left"></i></button>
+                        <button onclick="alignCenter()"><i class="fas fa-align-center"></i></button>
+                        <button onclick="alignRight()"><i class="fas fa-align-right"></i></button>
+                        <button onclick="alignJustify()"><i class="fas fa-align-justify"></i></button>
+                    </div>
+
+                    <!-- The editable area -->
+                    <div id="editor" placeholder="Enter update's information" contenteditable="true" style="padding: 10px; min-height: 200px;">
+                        <!-- Content goes here -->
+                    </div>
+                </div>
+            </div>
+            <div class="actions">
+                <button onclick="closeUpdateModal()" style="color: black; background:white; ">
+                    Cancel
+                </button>
+                <button style="border: none; background: #1B8271;">
+                    Submit Update
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlays" id="delete-modal">
+        <div class="modal">
+            <h2>
+                Are you sure you want to delete this campaign?
+            </h2>
+            <div class="actions">
+                <button class="cancel" onclick="closeDeleteModal()">
+                    Cancel
+                </button>
+                <button class="confirm" onclick="deleteCampaign()">
+                    OK
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+// Show the share modal
+function showModal() {
+    document.getElementById('modal-overlay').style.display = 'flex';
+}
+
+// Copy the campaign link to clipboard
+function copyLink() {
+    var copyText = document.getElementById("campaign-link");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /* For mobile devices */
+    document.execCommand("copy");
+    alert("Copied the link: " + copyText.value);
+}
+
+// Close the modals when clicking outside of them
+window.onclick = function(event) {
+    var modal = document.getElementById('modal-overlay');
+    var updateModal = document.getElementById('update-modal-overlay');
+    var deleteModal = document.getElementById('delete-modal');
+
+    // Check if the click target is the modal overlay
+    if (event.target == modal) {
+        modal.style.display = "none"; // Close the share modal
+    } else if (event.target == updateModal) {
+        updateModal.style.display = "none"; // Close the update modal
+    } else if (event.target == deleteModal) {
+        deleteModal.style.display = "none"; // Close the delete modal
+    }
+}
+
+
+// Show the update modal
+function showUpdateModal() {
+    document.getElementById('update-modal-overlay').style.display = 'flex';
+}
+
+// Close the update modal
+function closeUpdateModal() {
+    document.getElementById('update-modal-overlay').style.display = 'none';
+}
+
+// Show the delete modal
+function showDeleteModal() {
+    document.getElementById('delete-modal').style.display = 'flex';
+}
+
+// Close the delete modal
+function closeDeleteModal() {
+    document.getElementById('delete-modal').style.display = 'none';
+}
+
+// Delete the campaign
+function deleteCampaign() {
+    document.getElementById('campaign').remove();
+    closeDeleteModal();
+}
+    </script>
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- About Section -->
+            <div class="footer-section about" style="text-align: left; padding-right:200px;">
+                <h2 class="footer-logo">OnliFunds</h2>
+                <p class="footer-description">
+                    OnliFunds is a crowdfunding website that lets you raise money for anything that matters to you.
+                    From personal causes and events to projects and more. We aim to help people from our community
+                    to raised the funds they need.
+                </p>
+            </div>
+
+            <!-- Links Section -->
+            <div class="footer-section links" style="text-align: left; padding-right:200px;">
+                <h3 class="footer-heading">Learn More</h3>
+                <ul class="footer-links">
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/#team-members">Team Members</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms And Conditions</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="footer-section social-media" style="text-align: left;">
+                <h3 class="footer-heading">Social Medias</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><img src="../images/facebook.png" alt="Facebook Icon" style="	width: 28px;height:auto;"> Facebook</a></li>
+                    <li><a href="#"><img src="../images/twitter.png" alt="Twitter Icon" style="	width: 28px;height:auto;"> Twitter</a></li>
+                    <li><a href="#"><img src="../images/instagram.png" alt="Instagram Icon" style="	width: 28px;height:auto;"> Instagram</a></li>
+                    <li><a href="#"><img src="../images/linkedin.png" alt="LinkedIn Icon" style="	width: 28px;height:auto;"> LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <p>© 2024 Copyright OnliFunds. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- BOOTSTRAP SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- JAVASCRIPT -->
+    <script>function showSection(sectionId, button) {
+          // Hide all sections
+          const sections = document.querySelectorAll('.content-section');
+          sections.forEach(section => {
+            section.classList.remove('active');
+          });
+
+          // Show the selected section
+          const activeSection = document.getElementById(sectionId);
+          if (activeSection) {
+            activeSection.classList.add('active');
+          }
+
+          // Remove active state from all buttons
+          const buttons = document.querySelectorAll('#menu button');
+          buttons.forEach(btn => {
+            btn.classList.remove('active-btn');
+          });
+
+          // Add active state to the clicked button
+          button.classList.add('active-btn');
+        }</script>
+
+
+
+
+</body>
+</html>
