@@ -13,19 +13,26 @@ body, html {
 h1, h2, h3, h4, h5, h6 {
     font-family: "Segoe UI", Arial, sans-serif;
 }
-
-/* Navbar Styling */
-.navbar ,.navbars{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px;
-    background-color: white;
-    border-bottom: 1px solid #ddd;
-	position: sticky;
-	top: 0;
-	z-index: 4;
+.fund-button a{
+    text-decoration: none;
+    color: white;
 }
+.cardh3 {
+    width: 100%;
+    min-height: 80px;
+}
+    /* Navbar Styling */
+    .navbar, .navbars {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 40px;
+        background-color: white;
+        border-bottom: 1px solid #ddd;
+        position: sticky;
+        top: 0;
+        z-index: 4;
+    }
 
 .navbar-logo {
     display: flex;
@@ -2192,6 +2199,7 @@ h1, h2, h3, h4, h5, h6 {
 .detuser{
 	display: flex;
 	gap:10px;
+	margin-left: -15px;
 }
 
 .detuser .author-info{
@@ -3018,3 +3026,203 @@ height: 90%;	/* Adjust width as needed */
     display: flex;
     flex-direction: column;
 }
+
+/* MY-PROJECTS */
+
+
+/* CONTENT-------------- */
+.content-mp {
+    padding: 7% 14% 5% 14%;
+}
+
+.content-container {
+    background-color: white;
+    border: #000000 2px solid;
+    border-radius: 8px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.06); /* Subtle multi-layer shadow */
+    display: flex;
+}
+
+.content-left {
+    width: 65%;
+    padding: 40px 30px;
+    border-right: #000000 2px solid;
+}
+
+    .content-left img {
+        width: 100%;
+        margin: 20px 0px;
+    }
+
+.c-l-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+    .c-l-1 h1 {
+        color: #1B8271;
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    .c-l-1 h2 {
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+.content-left h3 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 40px 0px;
+}
+
+
+
+
+
+
+/* C-L-2 */
+.c-l-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dets-cont {
+    display: flex;
+    margin: 10px 5px;
+}
+
+    .dets-cont h1 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 28px;
+        margin-bottom: 10px;
+    }
+
+    .dets-cont img {
+        margin-right: 15px;
+        width: 40px;
+        height: 40px;
+    }
+
+
+
+/* C-L-3---- */
+.c-l-3 {
+    display: flex;
+    margin: 20px 0px;
+}
+
+.donors h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 100px;
+}
+
+.donors-data h5 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+
+/* VIEW CAMPAIGN */
+
+
+.view-campaign-button a {
+    border: #000000 1px solid;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 20px 30px;
+    font-size: 20px;
+    font-weight: 700;
+    width: 300px;
+    text-align: center;
+    margin-left: 600px;
+    margin-bottom: 30px;
+}
+
+    .view-campaign-button a:hover {
+        color: #00796b;
+    }
+
+
+
+.custom-progress-container-mp {
+    display: flex;
+}
+
+.custom-progress-mp {
+    background-color: #e9ecef; /* Light grey background */
+    border-radius: 5px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.custom-progress-bar-mp {
+    background-color: #ff6f61; /* Custom progress color */
+    height: 10px;
+    border-radius: 5px;
+    width: 65%;
+    position: relative;
+}
+
+.custom-progress-label-mp {
+    position: absolute;
+    top: -35px; /* Position above the progress bar */
+    right: 0; /* Align with the end of progress */
+    transform: translateX(50%); /* Center the label */
+    background-color: #ff6f61;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500pxh;
+    padding: 5px 10px;
+    border-radius: 20px; /* Rounded label */
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+    .custom-progress-label-mp::after {
+        content: "";
+        position: absolute;
+        bottom: -10px; /* Creates the small pointer */
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 5px;
+        border-style: solid;
+        border-color: #ff6f61 transparent transparent transparent;
+        margin-top: 20px;
+    }
+
+
+/* CONTENT RIGHTT------------------- */
+.content-right {
+    padding: 70px 50px;
+}
+
+.cont-right-info {
+    display: flex;
+    margin-bottom: 35px;
+}
+
+    .cont-right-info h1 {
+        font-size: 25px;
+        font-weight: 700;
+        margin: 0px 20px;
+    }
+
+    .cont-right-info a {
+        font-size: 25px;
+        font-weight: 700;
+        margin: 0px 20px;
+        text-decoration: none;
+        color: black;
+    }
+
+
+    .cont-right-info img {
+        width: 23px;
+        height: 23px;
+        margin: 5px 0px;
+    }
