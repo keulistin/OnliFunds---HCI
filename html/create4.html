@@ -28,7 +28,17 @@
 			border-radius: 5px;
 			margin-top: 0;
 		}
-
+		.create-container{
+		width: auto;
+		margin: 0 210px 0 210px;
+		}
+		.content1{
+		margin-left: 0;
+		}
+		.main-content4{
+		border: none;
+		box-shadow:none;
+		}
 	</style>
 </head>
 <body>
@@ -149,95 +159,73 @@
 
 </div>
  <div class="main-content4">
-    <h2>
-     Fundraiser Payment Methods
-    </h2>
-    <div class="payment-options">
-     <label for="paypal">
-      <input id="paypal" name="payment" onclick="showPaymentMethod('paypal-details')" type="radio"/>
-      PayPal
-     </label>
-     <div class="details" id="paypal-details">
-      <div class="payment-method-content">
-       <img alt="PayPal logo" height="50" src="../images/paypal.png" width="100"/>
-       <ul>
-        <li>
-         PayPal is widely available and trusted across Cebu City, Philippines, making it a popular choice, especially among digitally savvy users.
-        </li>
-        <li>
-         Set up a new PayPal account or link an existing one to your fundraising page in just seconds.
-        </li>
-       </ul>
-       <button>
-        Link with PayPal
-       </button>
-      </div>
-     </div>
-     <label for="gcash">
-      <input id="gcash" name="payment" onclick="showPaymentMethod('gcash-details')" type="radio"/>
-      GCash
-     </label>
-     <div class="details" id="gcash-details">
-      <div class="payment-method-content">
-       <img alt="GCash logo" height="50" src="../images/gcash.png" width="100"/>
-       <ul>
-        <li>
-         GCash is available in all parts of Cebu City, Philippines, and it's a commonly preferred payment method, especially amongst the more Internet-savvy.
-        </li>
-        <li>
-         Create an account at GCash or connect an existing account to your fundraising page in seconds.
-        </li>
-       </ul>
-       <button>
-        Link with GCash
-       </button>
-      </div>
-     </div>
-     <label for="paymaya">
-      <input id="paymaya" name="payment" onclick="showPaymentMethod('paymaya-details')" type="radio"/>
-      PayMaya
-     </label>
-     <div class="details" id="paymaya-details">
-      <div class="payment-method-content" style="padding-top: 15px;">
-       <h2 style="text-align:center; color:#01B463; font-size: 36px; padding-bottom: 10px;">
-        PayMaya
-       </h2>
-       <ul>
-        <li>
-         PayMaya is accessible throughout Cebu City, Philippines, and is a favored payment option, particularly among tech-savvy users.
-        </li>
-        <li>
-         Set up a new PayMaya account or connect an existing one to your fundraising page in just seconds.
-        </li>
-       </ul>
-       <button>
-        Link with PayMaya
-       </button>
-      </div>
-     </div>
-     <label for="credit-debit">
-      <input id="credit-debit" name="payment" onclick="showPaymentMethod('credit-debit-details')" type="radio"/>
-      Credit or Debit
-     </label>
-     <div class="details cre-det" id="credit-debit-details">
-      <div class="payment-method-content cre" style="background-color: transparent; border:none;">
-       <input class="cardnum" placeholder="Card number" type="text"/>
-       <div class="form-group">
-        <input placeholder="MM/YY" type="text"/>
-        <input placeholder="CVV" type="text"/>
-       </div>
-       <input class="cardname" placeholder="Cardholder's name" type="text"/>
-       <div class="form-group">
-        <input readonly type="text" value="Cebu, Philippines"/>
-        <input placeholder="6000" type="number"/>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="submit-button">
-		<button class="submit-btn" type="submit"><a href="../html/create4.html">Submit</a></button>
-    </div>
- </div>
+        <h2>Fundraiser Payment Methods</h2>
+        <div class="payment-options">
+            <label for="paypal">
+                <input id="paypal" name="payment" onclick="showPaymentMethod('paypal-details')" type="radio" />
+                PayPal
+            </label>
+            <div class="details" id="paypal-details">
+                <div class="payment-method-content">
+                    <img alt="PayPal logo" height="50" src="../images/paypal.png" width="100" />
+                    <ul>
+                        <li>PayPal is widely available and trusted across Cebu City, Philippines.</li>
+                        <li>Set up a new PayPal account or link an existing one to your fundraising page in just seconds.</li>
+                    </ul>
+                    <button type="button" class="link-btn" onclick="toggleLink('paypal', this)">Link with PayPal</button>
+                </div>
+            </div>
+            <label for="gcash">
+                <input id="gcash" name="payment" onclick="showPaymentMethod('gcash-details')" type="radio" />
+                GCash
+            </label>
+            <div class="details" id="gcash-details">
+                <div class="payment-method-content">
+                    <img alt="GCash logo" height="50" src="../images/gcash.png" width="100" />
+                    <ul>
+                        <li>GCash is available in all parts of Cebu City, Philippines.</li>
+                        <li>Create an account at GCash or connect an existing account to your fundraising page in seconds.</li>
+                    </ul>
+                    <button type="button" class="link-btn" onclick="toggleLink('gcash', this)">Link with GCash</button>
+                </div>
+            </div>
+            <label for="paymaya">
+                <input id="paymaya" name="payment" onclick="showPaymentMethod('paymaya-details')" type="radio" />
+                PayMaya
+            </label>
+            <div class="details" id="paymaya-details">
+                <div class="payment-method-content">
+                    <h2 style="text-align:center; color:#01B463; font-size: 36px; padding-bottom: 10px;">PayMaya</h2>
+                    <ul>
+                        <li>PayMaya is accessible throughout Cebu City, Philippines.</li>
+                        <li>Set up a new PayMaya account or connect an existing one to your fundraising page in just seconds.</li>
+                    </ul>
+                    <button type="button" class="link-btn" onclick="toggleLink('paymaya', this)">Link with PayMaya</button>
+                </div>
+            </div>
+            <label for="credit-debit">
+                <input id="credit-debit" name="payment" onclick="showPaymentMethod('credit-debit-details')" type="radio" />
+                Credit or Debit
+            </label>
+            <div class="details cre-det" id="credit-debit-details">
+                <div class="payment-method-content cre" style="background-color: transparent; border:none;">
+                    <input class="cardnum" placeholder="Card number" type="text" />
+                    <div class="form-group">
+                        <input placeholder="MM/YY" type="text" />
+                        <input placeholder="CVV" type="text" />
+                    </div>
+                    <input class="cardname" placeholder="Cardholder's name" type="text" />
+                    <div class="form-group">
+                        <input readonly type="text" value="Cebu, Philippines" />
+                        <input placeholder="6000" type="number" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="submit-button">
+            <button class="submit-btn" type="submit">Submit</button>
+        </div>
+</div>
   <script>
    function showPaymentMethod(method) {
             var methods = document.querySelectorAll('.details');
@@ -246,6 +234,31 @@
             });
             document.getElementById(method).style.display = 'block';
         }
+function toggleLink(paymentMethod, button) {
+    const currentText = button.innerText;
+
+    if (currentText.startsWith('Link with')) {
+        button.innerText = 'Unlink ' + paymentMethod;
+        // Store the payment method in the session
+        fetch('/link_payment_method', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ payment_method: paymentMethod }),
+        });
+    } else {
+        button.innerText = 'Link with ' + paymentMethod;
+        // Unlink the payment method in the session
+        fetch('/unlink_payment_method', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ payment_method: paymentMethod }),
+        });
+    }
+}
   </script>
     </section>
 
